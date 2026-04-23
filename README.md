@@ -89,7 +89,7 @@ pyinstaller \
   --noconsole \
   --add-data "bad_apple.mp4:." \
   --add-data "icon.png:." \
-  --name bad_apple_troll \
+  --name bad_apple \
   main.py
 ```
 
