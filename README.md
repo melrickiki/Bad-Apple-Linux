@@ -4,7 +4,7 @@ A recreation of the iconic **Bad Apple!!** animation rendered using real OS wind
 
 Instead of drawing pixels, this program dynamically spawns, moves, and resizes windows to reproduce each frame of the animation.
 
-![Preview](https://raw.githubusercontent.com/your-username/bad-apple-linux-troll/main/preview.png)
+![Preview](https://raw.githubusercontent.com/melrickiki/Bad-Apple-Linux/main/preview.png)
 
 > Replace with an actual screenshot or GIF.
 
