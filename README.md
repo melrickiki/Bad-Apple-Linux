@@ -70,8 +70,8 @@ sudo dnf install ffmpeg mpv python3-tkinter
 ## 🚀 Run from Source
 
 ```bash
-git clone https://github.com/your-username/bad-apple-linux-troll.git
-cd bad-apple-linux-troll
+git clone https://github.com/melrickiki/Bad-Apple-Linux.git
+cd Bad-Apple-Linux
 
 pip install -r requirements.txt
 python main.py
