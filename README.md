@@ -1,60 +1,119 @@
-# Bad Apple Linux Troll Edition 🍎
+# 🍎 Bad Apple — Linux (Window Renderer)
 
-A recreation of the iconic "Bad Apple" animation using actual OS windows on Linux. This program spawns, moves, and resizes windows dynamically to form the silhouettes of the animation.
+A recreation of the iconic **Bad Apple!!** animation rendered using real OS windows on Linux.
 
-![Bad Apple Setup](https://raw.githubusercontent.com/your-username/bad-apple-linux-troll/main/preview.png) *(Note: Replace with actual screenshot link)*
+Instead of drawing pixels, this program dynamically spawns, moves, and resizes windows to reproduce each frame of the animation.
 
-## Features
+![Preview](https://raw.githubusercontent.com/your-username/bad-apple-linux-troll/main/preview.png)
 
-- **Window-based Rendering**: Each white part of the video is rendered using real OS windows.
-- **Optimized Performance**: Uses a greedy rectangle algorithm to minimize the number of windows needed.
-- **Adwaita Interface**: A modern setup GUI to choose resolution and display modes.
-- **Audio Sync**: Automatically plays audio via `ffplay` or `mpv` with frame-skipping logic to keep everything in sync.
-- **Standalone Binary**: Can be compiled into a single executable that includes the video and icon.
+> Replace with an actual screenshot or GIF.
 
-## Installation
+---
 
-### Prerequisites
+## ✨ Features
 
-You need `python3` installed. For audio playback, it is recommended to have `ffplay` (from ffmpeg) or `mpv`.
+* **Window-Based Rendering**
+  Bright areas of each frame are represented using real OS windows.
+
+* **Rectangle Merging Optimization**
+  Uses a greedy rectangle algorithm to reduce the total number of windows per frame.
+
+* **Simple GUI (Adwaita)**
+  Allows selection of resolution and display mode before playback.
+
+* **Audio Playback & Sync**
+  Uses `ffplay` (FFmpeg) or `mpv`. Basic frame-skipping is used to reduce desync under load.
+
+* **Standalone Build Support**
+  Can be packaged into a single executable including assets.
+
+---
+
+## ⚠️ Limitations
+
+Don’t skip this — it’s where most similar projects lose credibility:
+
+* Performance heavily depends on:
+
+  * your CPU
+  * your window manager / compositor
+* May behave differently on:
+
+  * X11 vs Wayland
+* High resolutions can cause:
+
+  * lag
+  * desynchronization
+  * excessive window spawning
+
+This is not a video player — it’s a rendering experiment.
+
+---
+
+## ⚙️ Installation
+
+### Requirements
+
+* Python 3
+* `tkinter` (for GUI)
+* Optional (audio):
+
+  * `ffplay` (from FFmpeg)
+  * or `mpv`
+
+### Fedora / RedHat
 
 ```bash
-# On Fedora/RedHat
 sudo dnf install ffmpeg mpv python3-tkinter
 ```
 
-### Running from source
+---
 
-1. Clone the repository.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the script:
-   ```bash
-   python main.py
-   ```
+## 🚀 Run from Source
 
-## Compiling to Standalone Binary
+```bash
+git clone https://github.com/your-username/bad-apple-linux-troll.git
+cd bad-apple-linux-troll
 
-To create a single binaire containing everything:
+pip install -r requirements.txt
+python main.py
+```
+
+---
+
+## 📦 Build Standalone Binary
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --noconsole --add-data "bad_apple.mp4:." --add-data "icon.png:." --name bad_apple_troll main.py
+
+pyinstaller \
+  --onefile \
+  --noconsole \
+  --add-data "bad_apple.mp4:." \
+  --add-data "icon.png:." \
+  --name bad_apple_troll \
+  main.py
 ```
 
-The executable will be generated in the `dist/` folder.
+Output:
 
-## Controls
+```
+dist/
+```
 
-- **Esc** or **q**: Close the animation (especially useful in borderless mode).
+---
 
-## Acknowledgments
+## 🎮 Controls
 
-- Original "Bad Apple!!" animation by Alstroemeria Records.
-- Inspired by various "window manager troll" projects.
+| Key         | Action         |
+| ----------- | -------------- |
+| `Esc` / `q` | Exit animation |
 
-## License
+---
 
-MIT
+## 🙏 Credits
+
+* **Bad Apple!!** — Alstroemeria Records
+* Concept inspired by window-based rendering experiments
+
+---
