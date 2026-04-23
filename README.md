@@ -6,8 +6,6 @@ Instead of drawing pixels, this program dynamically spawns, moves, and resizes w
 
 ![Preview](https://raw.githubusercontent.com/melrickiki/Bad-Apple-Linux/main/preview.png)
 
-> Replace with an actual screenshot or GIF.
-
 ---
 
 ## ✨ Features
